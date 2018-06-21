@@ -1,0 +1,144 @@
+<html>
+
+<head>
+  <title>Some Clicker (Web Edition)</title>
+
+  <link rel="icon" href="files/images/icons/favicon.png?" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="57x57" href="files/images/icons/favicon.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="files/images/icons/favicon.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="files/images/icons/favicon.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="files/images/icons/favicon.png">
+
+  <!-- Style  -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+          integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+          crossorigin="anonymous">
+
+  </script>
+
+  <!-- Upgrades  -->
+  <script src="upgrades.js"></script>
+
+  <!-- Startup -->
+  <script src="startup.js"></script>
+
+  <!-- Click Handler -->
+  <script src="clickHandler.js"></script>
+
+  <!-- Upgrade Handler -->
+  <script src="upgradeHandler.js"></script>
+  
+  <!-- Sound Handler -->
+  <script src="soundHandler.js"></script>
+
+  <!-- Cases -->
+  <script src="case.js"></script>
+  
+  <!-- Ready Stuff -->
+  <script>
+    $(document).ready(clickHandler);
+    $(document).ready(upgradeHandler);
+    $(document).ready(invis);
+
+    $(document).ready(loadCookie);
+    $(document).ready(loadClicks);
+  </script>
+
+<body>
+  <h1 id="title">Some Clicker v0.5.2 (Web Edition)</h1>
+
+  <div class="click-wrap">
+    <span id="click-wrap-title">Clicks: </span>
+    <span id="clicker_text">0</span>
+  </div>
+    
+  <br>
+  
+  <button style="align: center;" type="button" id="clicker_button">Click Me!</button>
+  <button style="align: center;" type="button" id="save" onclick="saveCookie()">Save</button>
+
+  <!-- TODO: Move to Aside -->
+  <form method="get" action="files/changelog.txt">
+      <button type="submit">Changelog</button>
+  </form>
+
+  <!-- <button style="align: center;" type="button" id="openCase" onclick="openCase()">Open Case (Not Functional)</button> -->
+
+  <div id="stats">
+      <p id="auto_stat"></p>
+      <p id="bomb_stat"></p>
+      <p id="factory_stat"></p>
+  </div>
+
+  <!-- Shop -->
+  <div id="shop">
+    <h3> --- The Shop ---</h3>
+
+    <div id="shop_item">
+      <!-- Two Per Click  -->
+      <div id="two_per">
+        <h4>2 Clicks Per Click</h4>
+        <button style="align: center;" type="button" id="two_per_upgrade">50 Clicks</button>
+      </div>
+
+      <!-- Five Per Click  -->
+      <div id="five_per">
+        <h4>5 Clicks Per Click</h4>
+        <button style="align: center;" type="button" id="five_per_upgrade">200 Clicks</button>
+      </div>
+
+      <!-- Seven Per Click  -->
+      <div id="seven_per">
+        <h4>7 Clicks Per Click</h4>
+        <button style="align: center;" type="button" id="seven_per_upgrade">500 Clicks</button>
+      </div>
+
+      <!-- Ten Per Click  -->
+      <div id="ten_per">
+        <h4>10 Clicks Per Click</h4>
+        <button style="align: center;" type="button" id="ten_per_upgrade">2000 Clicks</button>
+      </div>
+
+      <!-- Auto Clicker Tier 1  -->
+      <div id="auto_1">
+          <h4>Auto Clicker: Tier 1</h4>
+          <button style="align: center;" type="button" id="auto_1_upgrade">700 Clicks</button>
+      </div>
+
+      <!-- Auto Clicker Tier 2  -->
+      <div id="auto_2">
+          <h4>Auto Clicker: Tier 2</h4>
+          <button style="align: center;" type="button" id="auto_1_upgrade">1200 Clicks</button>
+      </div>
+
+      <!-- Auto Clicker Tier 2  -->
+      <div id="auto_999">
+        <h4>Auto Clicker: 999</h4>
+        <button style="align: center;" type="button" id="auto_1_upgrade">1,000,000 Clicks</button>
+      </div>
+
+      <!-- Click Bomb: Tier 1  -->
+      <div id="click_bomb_1">
+        <h4>Click Bomb: Tier 1</h4>
+        <button style="align: center;" type="button" id="seven_per_upgrade">666 Clicks</button>
+      </div>
+
+      <!-- Click Bomb: Tier 2  -->
+      <div id="click_bomb_2">
+        <h4>Click Bomb: Tier 2</h4>
+        <button style="align: center;" type="button" id="seven_per_upgrade">2000 Clicks</button>
+      </div>
+
+      <!-- Click Factory: Tier 1-->
+      <div id="click_factory_1">
+          <h4>Click Factory: Tier 1</h4>
+          <button style="align: center;" type="button" id="seven_per_upgrade">1000 Clicks</button>
+        </div>
+    </div>
+  </div>
+</body>
+
+</html>
