@@ -6,7 +6,7 @@ function upgradeHandler() {
       $("#five_per").show()
 
       clicks -= 50;
-      perClick = 2;
+      var perClick = 2;
       
       buy(); 
       $("#clicker_text").html(`${clicks}`);

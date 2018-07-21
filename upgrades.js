@@ -9,7 +9,7 @@ function autoclicker() {
 
 clicks = 0;
 bombInc = 100;
-timer = 10000;
+var timer = 10000;
 
 function clickBomb() {
     clicks += bombInc;
@@ -20,11 +20,11 @@ function clickBomb() {
 
 clicks = 0;
 inc = 10;
-wait = 5000
+var wait = 5000;
 
 function clickFactory() {
     clicks += inc;
     $("#clicker_text").html(`${clicks}`);
     
-    setTimeout(clickFactory, wait)
+    setTimeout(clickFactory, wait);
 }

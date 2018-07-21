@@ -1,5 +1,5 @@
-clicks = 0;
-perClick = 1;
+var clicks = 0;
+var perClick = 1;
 
 function clickHandler() {
   
