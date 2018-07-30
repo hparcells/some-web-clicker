@@ -5,3 +5,6 @@
 The Code to My Web Clicker Game
 
 A lot of the code is badly designed, and probably will be all revised in the near future.
+
+## Play
+You can play Some Web Clicker now at [http://someclicker.surge.sh/](http://someclicker.surge.sh/) which will most likely be moved to a nee domain in the bear future.
