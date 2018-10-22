@@ -1,142 +1,27 @@
-<html>
-  <head>
-    <title>Some Clicker (Web Edition)</title>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Metadata -->
+        <meta charset="UTF-8">
+        <meta name="language" content="EN">
+        <meta name="description" content="A Web Clicker Game">
+        <meta name="keywords" content="Game,Games,HTML,Online,Clicker">
+        <meta name="author" content="Hunter Parcells">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="identifier-url" content="https://hparcells.me/">
 
-    <link rel="icon" href="images/icons/favicon.png?" type="image/x-icon">
-    <link rel="apple-touch-icon" sizes="57x57" href="images/icons/favicon.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="images/icons/favicon.png">
-    <link rel="apple-touch-icon" sizes="114x114" href=images/icons/favicon.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="images/icons/favicon.png">
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
 
-    <!-- Style  -->
-    <link rel="stylesheet" href="css/style.css">
+        <!-- Scripts -->
+        <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
 
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
-            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-            crossorigin="anonymous">
+        <title>Some Web Clicker</title>
+    </head>
 
-    </script>
-
-    <!-- Upgrades  -->
-    <script src="js/upgrades.js"></script>
-
-    <!-- Startup -->
-    <script src="js/startup.js"></script>
-
-    <!-- Click Handler -->
-    <script src="js/clickHandler.js"></script>
-
-    <!-- Upgrade Handler -->
-    <script src="js/upgradeHandler.js"></script>
-    
-    <!-- Sound Handler -->
-    <script src="js/soundHandler.js"></script>
-
-    <!-- Cases -->
-    <script src="js/case.js"></script>
-    
-    <!-- Ready Stuff -->
-    <script>
-      $(document).ready(clickHandler);
-      $(document).ready(upgradeHandler);
-      $(document).ready(invis);
-
-      $(document).ready(loadCookie);
-      $(document).ready(loadClicks);
-    </script>
-
-  <body>
-    <h1 id="title">Some Clicker v0.5.2 (Web Edition)</h1>
-
-    <div class="click-wrap">
-      <span id="click-wrap-title">Clicks: </span>
-      <span id="clicker_text">0</span>
-    </div>
-      
-    <br>
-    
-    <button style="align: center;" type="button" id="clicker_button">Click Me!</button>
-    <button style="align: center;" type="button" id="save" onclick="saveCookie()">Save</button>
-
-    <!-- TODO: Move to Aside -->
-    <form method="get" action="changelog.txt">
-        <button type="submit">Changelog</button>
-    </form>
-
-    <!-- <button style="align: center;" type="button" id="openCase" onclick="openCase()">Open Case (Not Functional)</button> -->
-
-    <div id="stats">
-        <p id="auto_stat"></p>
-        <p id="bomb_stat"></p>
-        <p id="factory_stat"></p>
-    </div>
-
-    <!-- Shop -->
-    <div id="shop">
-      <h3> --- The Shop ---</h3>
-
-      <div id="shop_item">
-        <!-- Two Per Click  -->
-        <div id="two_per">
-          <h4>2 Clicks Per Click</h4>
-          <button style="align: center;" type="button" id="two_per_upgrade">50 Clicks</button>
-        </div>
-
-        <!-- Five Per Click  -->
-        <div id="five_per">
-          <h4>5 Clicks Per Click</h4>
-          <button style="align: center;" type="button" id="five_per_upgrade">200 Clicks</button>
-        </div>
-
-        <!-- Seven Per Click  -->
-        <div id="seven_per">
-          <h4>7 Clicks Per Click</h4>
-          <button style="align: center;" type="button" id="seven_per_upgrade">500 Clicks</button>
-        </div>
-
-        <!-- Ten Per Click  -->
-        <div id="ten_per">
-          <h4>10 Clicks Per Click</h4>
-          <button style="align: center;" type="button" id="ten_per_upgrade">2000 Clicks</button>
-        </div>
-
-        <!-- Auto Clicker Tier 1  -->
-        <div id="auto_1">
-            <h4>Auto Clicker: Tier 1</h4>
-            <button style="align: center;" type="button" id="auto_1_upgrade">700 Clicks</button>
-        </div>
-
-        <!-- Auto Clicker Tier 2  -->
-        <div id="auto_2">
-            <h4>Auto Clicker: Tier 2</h4>
-            <button style="align: center;" type="button" id="auto_1_upgrade">1200 Clicks</button>
-        </div>
-
-        <!-- Auto Clicker Tier 2  -->
-        <div id="auto_999">
-          <h4>Auto Clicker: 999</h4>
-          <button style="align: center;" type="button" id="auto_1_upgrade">1,000,000 Clicks</button>
-        </div>
-
-        <!-- Click Bomb: Tier 1  -->
-        <div id="click_bomb_1">
-          <h4>Click Bomb: Tier 1</h4>
-          <button style="align: center;" type="button" id="seven_per_upgrade">666 Clicks</button>
-        </div>
-
-        <!-- Click Bomb: Tier 2  -->
-        <div id="click_bomb_2">
-          <h4>Click Bomb: Tier 2</h4>
-          <button style="align: center;" type="button" id="seven_per_upgrade">2000 Clicks</button>
-        </div>
-
-        <!-- Click Factory: Tier 1-->
-        <div id="click_factory_1">
-            <h4>Click Factory: Tier 1</h4>
-            <button style="align: center;" type="button" id="seven_per_upgrade">1000 Clicks</button>
-          </div>
-      </div>
-    </div>
-  </body>
+    <body>    
+        
+    </body>
 </html>
