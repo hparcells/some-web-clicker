@@ -5,12 +5,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## Modern Some Web Clicker [0.6.0 - Present]
-### Unreleased [10/22/2018]
+### 0.6.0 [10/23/2018]
 #### Additions
 - Using [Material Design Lite](https://getmdl.io/).
-
-#### Removals
-- Removed old Some Web Clicker.
+- Bomb upgrade.
 
 ## Old Some Web Clicker [0.1.0 - 0.5.2]
 ### 0.5.2

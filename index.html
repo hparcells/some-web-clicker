@@ -12,6 +12,7 @@
 
         <!-- Stylesheets -->
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/material.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.light_blue-indigo.min.css">
 
@@ -29,8 +30,35 @@
             <button id="clicker" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
                 +1 Click
             </button>
+
+            <hr>
+
+            <div id="shop">
+                <h3>The Shop</h3>
+    
+                <div class="mdl-grid centeritems">
+                    <div class="mdl-layout-spacer"></div>
+                    <div id="bombCard" class="shopCard card-wide mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col">
+                        <div id="bombImage" class="mdl-card__title">
+                            <h2 id="bombCardTitle" class="mdl-card__title-text">Click Bomb (Lvl. 1)</h2>
+                        </div>
+                        <div class="mdl-card__supporting-text">A bomb that gives off a burst of clicks every couple seconds.</div>
+                        <div class="mdl-card__actions mdl-card--border">
+                            <a id="bombCardPrice" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" onclick="buy('bomb')">Buy (100 Clicks)</a>
+                        </div>
+                    </div>
+                    <div class="mdl-layout-spacer"></div>
+                </div>
+            </div>
+
+            <div id="snackbar" class="mdl-js-snackbar mdl-snackbar">
+                <div class="mdl-snackbar__text"></div>
+                <button class="mdl-snackbar__action" type="button"></button>
+            </div>
         </div>
 
         <script src="./js/clickHandler.js"></script>
+        <script src="./js/upgradeHandler.js"></script>
+        <script src="./js/upgrades/bomb.js"></script>
     </body>
 </html>

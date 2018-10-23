@@ -6,3 +6,7 @@
     padding: 50px;
     line-height: 0px;
 }
+
+#bombImage {
+    background: url("../images/shop/bomb.png") center / cover; 
+}
