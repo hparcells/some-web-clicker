@@ -10,11 +10,9 @@ var bombLevelData = [
 ];
 
 function buyBomb() {
-    if(clicks >= bombLevelData[bombLevel].price) {
-        console.log("Bought Upgrade: Bomb");
-        
+    if(clicks >= bombLevelData[bombLevel].price) {        
         clicks -= bombLevelData[bombLevel].price;
-        document.getElementById("clickCount").innerText = `Clicks: ${clicks}`;
+        clickCount.innerText = `Clicks: ${clicks}`;
         
         var bombNewPerFiveSeconds = bombLevelData[bombLevel].perFiveSeconds
         setInterval(function () {
@@ -33,6 +31,8 @@ function buyBomb() {
             bombCardTitle.innerText = "Click Bomb (Lvl. " + nextBombLevel + ")";
             bombCardPrice.innerText = "Buy (" + nextBombPrice + " Clicks)"
         }
+
+        console.log(`Bought Upgrade: Bomb, Level: ${bombLevel}.`);
     }else {
         var data = {
             message: "Not enough clicks!",

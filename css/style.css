@@ -10,3 +10,7 @@
 #bombImage {
     background: url("../images/shop/bomb.png") center / cover; 
 }
+
+#perClickImage {
+    background: url("../images/shop/per-click.png") center / cover; 
+}

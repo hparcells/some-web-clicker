@@ -24,25 +24,38 @@
     
     <body>
         <div id="game">
-            <h1>Some Web Clicker (0.6.0)</h1>
+            <h1>Some Web Clicker (0.7.0)</h1>
 
             <h3 id="clickCount">Clicks: 0</h3>
             <button id="clicker" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
                 +1 Click
             </button>
+            <!-- <h5 id="automaticCPS">Automatic Clicks Per Second: 0</h5>   -->
 
             <hr>
 
             <div id="shop">
                 <h3>The Shop</h3>
     
-                <div class="mdl-grid centeritems">
+                <div class="mdl-grid">
                     <div class="mdl-layout-spacer"></div>
-                    <div id="bombCard" class="shopCard card-wide mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col">
-                        <div id="bombImage" class="mdl-card__title">
-                            <h2 id="bombCardTitle" class="mdl-card__title-text">Click Bomb (Lvl. 1)</h2>
+                    <div id="perClickCard" class="shopCard card-wide mdl-card mdl-shadow--2dp mdl-cell">
+                        <div id="perClickImage" class="mdl-card__title"></div>
+                        <div class="mdl-card__supporting-text">
+                            <h3 id="perClickCardTitle">Per Click (Lvl. 1)</h3>
+                            <p>Increases the amount of clicks you get per click.</p>
                         </div>
-                        <div class="mdl-card__supporting-text">A bomb that gives off a burst of clicks every couple seconds.</div>
+                        <div class="mdl-card__actions mdl-card--border">
+                            <a id="perClickCardPrice" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" onclick="buy('perClick')">Buy (50 Clicks)</a>
+                        </div>
+                    </div>
+                    <div class="mdl-layout-spacer"></div>
+                    <div id="bombCard" class="shopCard card-wide mdl-card mdl-shadow--2dp mdl-cell">
+                        <div id="bombImage" class="mdl-card__title"></div>
+                        <div class="mdl-card__supporting-text">
+                            <h3 id="bombCardTitle">Click Bomb (Lvl. 1)</h3>
+                            <p>A bomb that gives off a burst of clicks every couple seconds.</p>
+                        </div>
                         <div class="mdl-card__actions mdl-card--border">
                             <a id="bombCardPrice" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" onclick="buy('bomb')">Buy (100 Clicks)</a>
                         </div>
@@ -60,5 +73,6 @@
         <script src="./js/clickHandler.js"></script>
         <script src="./js/upgradeHandler.js"></script>
         <script src="./js/upgrades/bomb.js"></script>
+        <script src="./js/upgrades/per-click.js"></script>
     </body>
 </html>
