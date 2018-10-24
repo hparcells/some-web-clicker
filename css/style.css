@@ -7,10 +7,18 @@
     line-height: 0px;
 }
 
-#bombImage {
-    background: url("../images/shop/bomb.png") center / cover; 
+#perClickCardImage {
+    background: url("../images/shop/per-click.png") center / cover; 
 }
 
-#perClickImage {
-    background: url("../images/shop/per-click.png") center / cover; 
+#clickBombCardImage {
+    background: url("../images/shop/click-bomb.png") center / cover; 
+}
+
+#clickFactoryCardImage {
+    background: url("../images/shop/click-factory.png") center / cover; 
+}
+
+#autoClickerCardImage {
+    background: url("../images/shop/coming-soon.png") center / cover; 
 }

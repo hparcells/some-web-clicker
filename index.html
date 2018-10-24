@@ -24,7 +24,7 @@
     
     <body>
         <div id="game">
-            <h1>Some Web Clicker (0.7.1)</h1>
+            <h1>Some Web Clicker (0.8.0)</h1>
 
             <h3 id="clickCount">Clicks: 0</h3>
             <button id="clicker" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
@@ -40,7 +40,7 @@
                 <div class="mdl-grid">
                     <div class="mdl-layout-spacer"></div>
                     <div id="perClickCard" class="shopCard card-wide mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col-desktop mdl-cell--8-col-tablet">
-                        <div id="perClickImage" class="mdl-card__title"></div>
+                        <div id="perClickCardImage" class="mdl-card__title"></div>
                         <div class="mdl-card__supporting-text">
                             <h3 id="perClickCardTitle">Per Click (Lvl. 1)</h3>
                             <p>Increases the amount of clicks you get per click.</p>
@@ -50,14 +50,36 @@
                         </div>
                     </div>
                     <div class="mdl-layout-spacer"></div>
-                    <div id="bombCard" class="shopCard card-wide mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col-desktop mdl-cell--8-col-tablet">
-                        <div id="bombImage" class="mdl-card__title"></div>
+                    <div id="clickBombCard" class="shopCard card-wide mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col-desktop mdl-cell--8-col-tablet">
+                        <div id="clickBombCardImage" class="mdl-card__title"></div>
                         <div class="mdl-card__supporting-text">
-                            <h3 id="bombCardTitle">Click Bomb (Lvl. 1)</h3>
-                            <p>A bomb that gives off a burst of clicks every couple seconds.</p>
+                            <h3 id="clickBombCardTitle">Click Bomb (Lvl. 1)</h3>
+                            <p>A bomb that gives off a burst of clicks every five seconds.</p>
                         </div>
                         <div class="mdl-card__actions mdl-card--border">
-                            <a id="bombCardPrice" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" onclick="buy('bomb')">Buy (100 Clicks)</a>
+                            <a id="clickBombCardPrice" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" onclick="buy('clickBomb')">Buy (100 Clicks)</a>
+                        </div>
+                    </div>
+                    <div class="mdl-layout-spacer"></div>
+                    <div id="clickFactoryCard" class="shopCard card-wide mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col-desktop mdl-cell--8-col-tablet">
+                        <div id="clickFactoryCardImage" class="mdl-card__title"></div>
+                        <div class="mdl-card__supporting-text">
+                            <h3 id="clickFactoryCardTitle">Click Factory (Lvl. 1)</h3>
+                            <p>A factory that gives off a large burst of clicks every 20 seconds.</p>
+                        </div>
+                        <div class="mdl-card__actions mdl-card--border">
+                            <a id="clickFactoryCardPrice" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" onclick="buy('clickFactory')">Buy (1000 Clicks)</a>
+                        </div>
+                    </div>
+                    <div class="mdl-layout-spacer"></div>
+                    <div id="autoClickerCard" class="shopCard card-wide mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col-desktop mdl-cell--8-col-tablet">
+                        <div id="autoClickerCardImage" class="mdl-card__title"></div>
+                        <div class="mdl-card__supporting-text">
+                            <h3 id="autoClickerCardTitle">Auto Clicker (Coming Soon!)</h3>
+                            <p>A constant stream of clicks!</p>
+                        </div>
+                        <div class="mdl-card__actions mdl-card--border">
+                            <a id="autoClickerCardPrice" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" onclick="buy('autoClicker')">Buy (2500 Clicks)</a>
                         </div>
                     </div>
                     <div class="mdl-layout-spacer"></div>
@@ -72,7 +94,9 @@
 
         <script src="./js/clickHandler.js"></script>
         <script src="./js/upgradeHandler.js"></script>
-        <script src="./js/upgrades/bomb.js"></script>
+        <script src="./js/upgrades/click-bomb.js"></script>
         <script src="./js/upgrades/per-click.js"></script>
+        <script src="./js/upgrades/click-factory.js"></script>
+        <script src="./js/upgrades/auto-clicker.js"></script>
     </body>
 </html>
