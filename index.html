@@ -23,17 +23,20 @@
     </head>
     
     <body>
+        <!-- The Actual Game -->
         <div id="game">
-            <h1>Some Web Clicker (0.8.0)</h1>
+            <h1>Some Web Clicker (0.8.1)</h1>
 
             <h3 id="clickCount">Clicks: 0</h3>
             <button id="clicker" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
                 +1 Click
             </button>
+            <!-- TODO: Do something with this. -->
             <!-- <h5 id="automaticCPS">Automatic Clicks Per Second: 0</h5>   -->
 
             <hr>
 
+            <!-- The Shop -->
             <div id="shop">
                 <h3>The Shop</h3>
     
@@ -90,8 +93,14 @@
                 <div class="mdl-snackbar__text"></div>
                 <button class="mdl-snackbar__action" type="button"></button>
             </div>
+            
+            <a id="changelogButton" href="changelog.html">
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Changelog</button>
+            </a>
         </div>
 
+
+        <!-- Game Scripts -->
         <script src="./js/clickHandler.js"></script>
         <script src="./js/upgradeHandler.js"></script>
         <script src="./js/upgrades/click-bomb.js"></script>

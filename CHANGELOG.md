@@ -4,8 +4,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## Modern Some Web Clicker [0.6.0 - 0.7.1]
-### Unreleased [10/24/2018]
+## Modern Some Web Clicker [0.6.0 - 0.8.0]
+### 0.8.1 [10/24/2018]
+#### Additions
+- Changelog button and changelog page.
+
+#### Known Bugs
+- Changing the clicker button text breaks the ripple.
+
+### 0.8.0 [10/24/2018]
 #### Additions
 - **NEW!** Click Factory upgrade.
 - More Bomb levels.
@@ -18,9 +25,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Clicker button now shows how many clicks you get per click.
 - Fixed Click Bomb keeping multiple instances of `setTimeout()` resulting in getting the clicks from the last level.
 
+#### Known Bugs
+- Changing the clicker button text breaks the ripple.
+
 ### 0.7.1 [10/23/2018]
 #### Fixes
 - Fixed column issues on tablet sized screens.
+
+#### Known Bugs
+- Click Bomb keeps multiple instances of `setTimeout()` resulting in getting the clicks from the last level.
 
 ### 0.7.0 [10/23/2018]
 #### Additions
@@ -31,10 +44,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Card title is nov with the description instead of the image.
 - Handles click adding differently.
 
+#### Known Bugs
+- Click Bomb keeps multiple instances of `setTimeout()` resulting in getting the clicks from the last level.
+
 ### 0.6.0 [10/23/2018]
 #### Additions
 - Using [Material Design Lite](https://getmdl.io/).
 - Bomb upgrade.
+
+#### Known Bugs
+- Click Bomb keeps multiple instances of `setTimeout()` resulting in getting the clicks from the last level.
 
 ## Old Some Web Clicker [0.1.0 - 0.5.2]
 ### 0.5.2
