@@ -1,6 +1,7 @@
 var clickBombCard = document.getElementById("clickBombCard");
 var clickBombCardTitle = document.getElementById("clickBombCardTitle");
 var clickBombCardPrice = document.getElementById("clickBombCardPrice");
+var clickBombSpacer = document.getElementById("clickBombSpacer");
 
 var clickBombLevel = 0;
 var clickBombInterval;
@@ -29,6 +30,7 @@ function buyClickBomb() {
         
         if(clickBombLevel >= clickBombLevelData.length) {
             clickBombCard.style.display = "none";
+            clickBombSpacer.style.display = "none";
         }else {
             var nextClickBombLevel = clickBombLevel + 1;
             var nextClickBombPrice = clickBombLevelData[clickBombLevel].price;

@@ -1,6 +1,7 @@
 var clickFactoryCard = document.getElementById("clickFactoryCard");
 var clickFactoryCardTitle = document.getElementById("clickFactoryCardTitle");
 var clickFactoryCardPrice = document.getElementById("clickFactoryCardPrice");
+var clickFactorySpacer = document.getElementById("clickFactorySpacer");
 
 var clickFactoryLevel = 0;
 var clickFactoryInterval;
@@ -29,6 +30,7 @@ function buyClickFactory() {
 
         if(clickFactoryLevel >= clickFactoryLevelData.length) {
             clickFactoryCard.style.display = "none";
+            clickFactorySpacer.style.display = "none";
         }else {
             var nextClickFactoryLevel = clickFactoryLevel + 1;
             var nextclickFactoryPrice = clickFactoryLevelData[clickFactoryLevel].price;

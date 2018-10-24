@@ -2,6 +2,7 @@ var clicker = document.getElementById("clicker");
 var perClickCard = document.getElementById("perClickCard");
 var perClickCardTitle = document.getElementById("perClickCardTitle");
 var perClickCardPrice = document.getElementById("perClickCardPrice");
+var perClickSpacer = document.getElementById("perClickSpacer");
 
 var perClickLevel = 0;
 
@@ -31,6 +32,7 @@ function buyPerClick() {
         
         if(perClickLevel >= perClickLevelData.length) {
             perClickCard.style.display = "none";
+            perClickSpacer.style.display = "none";
         }else {
             var nextPerClickLevel = perClickLevel + 1;
             var nextPerClickPrice = perClickLevelData[perClickLevel].price;

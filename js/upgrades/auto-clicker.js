@@ -1,6 +1,7 @@
 var autoClickerCard = document.getElementById("autoClickerCard");
 var autoClickerCardTitle = document.getElementById("autoClickerCardTitle");
 var autoClickerCardPrice = document.getElementById("autoClickerCardPrice");
+var autoClickerSpacer = document.getElementById("autoClickerSpacer");
 
 var autoClickerLevel = 0;
 var autoClickerInterval;
@@ -31,6 +32,7 @@ function buyAutoClicker() {
 
         if(autoClickerLevel >= autoClickerLevelData.length) {
             autoClickerCard.style.display = "none";
+            autoClickerSpacer.style.display = "none";
         }else {
             var nextAutoClickerLevel = autoClickerLevel + 1;
             var nextAutoClickerPrice =  autoClickerLevelData[autoClickerLevel].price;

@@ -17,6 +17,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Changelog button and changelog page.
 - Icons.
 
+#### Fixes
+- Fixed spacing problem when removing shop items.
+
 #### Known Bugs
 - Changing the clicker button text breaks the ripple.
 
