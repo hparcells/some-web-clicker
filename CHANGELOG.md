@@ -4,10 +4,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## Modern Some Web Clicker [0.6.0 - 0.8.0]
+## Modern Some Web Clicker [0.6.0 - 0.8.1]
 ### 0.8.1 [10/24/2018]
 #### Additions
 - Changelog button and changelog page.
+- Icons.
 
 #### Known Bugs
 - Changing the clicker button text breaks the ripple.
@@ -37,7 +38,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### 0.7.0 [10/23/2018]
 #### Additions
-- Per Click upgrade.
+- **NEW!** Per Click upgrade.
 - Logging when an upgrade is bought.
 
 #### Changes
