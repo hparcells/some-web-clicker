@@ -12,13 +12,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 #### Changes
 - Made more upgrades fit in on desktop screens.
 
+#### Fixes
+- Fixed spacing problem when removing shop items.
+
 ### 0.8.1 [10/24/2018]
 #### Additions
 - Changelog button and changelog page.
 - Icons.
-
-#### Fixes
-- Fixed spacing problem when removing shop items.
 
 #### Known Bugs
 - Changing the clicker button text breaks the ripple.
