@@ -31,10 +31,10 @@ function buyClickBomb() {
             clickBombCard.style.display = "none";
         }else {
             var nextClickBombLevel = clickBombLevel + 1;
-            var nextclickBombPrice = clickBombLevelData[clickBombLevel].price;
+            var nextClickBombPrice = clickBombLevelData[clickBombLevel].price;
 
             clickBombCardTitle.innerText = "Click Bomb (Lvl. " + nextClickBombLevel + ")";
-            clickBombCardPrice.innerText = "Buy (" + nextclickBombPrice  + " Clicks)"
+            clickBombCardPrice.innerText = "Buy (" + nextClickBombPrice  + " Clicks)"
         }
 
         console.log(`Bought Upgrade: Click Bomb, Level: ${clickBombLevel}.`);
