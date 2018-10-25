@@ -41,6 +41,7 @@ function buyPerClick() {
             perClickCardPrice.innerText = "Buy (" + nextPerClickPrice + " Clicks)"
         }
 
+        playSound("buy");
         console.log(`Bought Upgrade: Per Click, Level: ${perClickLevel}`);
     }else {
         var data = {

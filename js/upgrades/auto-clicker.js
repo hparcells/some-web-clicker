@@ -31,7 +31,7 @@ function buyAutoClicker() {
         autoClickerLevel++;
 
         if(autoClickerLevel >= autoClickerLevelData.length) {
-            autoClickerCard.style.display = "none";
+            autoClickerCard.style.display =  "none";
             autoClickerSpacer.style.display = "none";
         }else {
             var nextAutoClickerLevel = autoClickerLevel + 1;
@@ -41,6 +41,7 @@ function buyAutoClicker() {
             autoClickerCardPrice.innerText = "Buy (" + nextAutoClickerPrice  + " Clicks)"
         }
 
+        playSound("buy");
         console.log(`Bought Upgrade: Auto Clicker, Level: ${autoClickerLevel}.`);
     }else {
         var data = {

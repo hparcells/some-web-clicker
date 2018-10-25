@@ -39,6 +39,7 @@ function buyClickFactory() {
             clickFactoryCardPrice.innerText = "Buy (" + nextclickFactoryPrice  + " Clicks)"
         }
 
+        playSound("buy");
         console.log(`Bought Upgrade: Click Factory, Level: ${clickFactoryLevel}.`);
     }else {
         var data = {

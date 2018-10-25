@@ -39,6 +39,7 @@ function buyClickBomb() {
             clickBombCardPrice.innerText = "Buy (" + nextClickBombPrice  + " Clicks)"
         }
 
+        playSound("buy");
         console.log(`Bought Upgrade: Click Bomb, Level: ${clickBombLevel}.`);
     }else {
         var data = {
