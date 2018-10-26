@@ -16,6 +16,10 @@
     background: url("../images/shop/click-bomb.png") center / cover; 
 }
 
+#clickMinerCardImage {
+    background: url("../images/shop/click-miner.png") center / cover; 
+}
+
 #clickFactoryCardImage {
     background: url("../images/shop/click-factory.png") center / cover; 
 }

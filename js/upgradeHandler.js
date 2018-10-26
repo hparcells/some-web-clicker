@@ -2,9 +2,10 @@ var snackbar = document.getElementById("snackbar");
 
 function buy(upgrade) {
     switch(upgrade) {
-        case("clickBomb"): buyClickBomb(); break;
         case("perClick"): buyPerClick(); break;
+        case("clickBomb"): buyClickBomb(); break;
         case("clickFactory"): buyClickFactory(); break;
+        case("clickMiner"): buyClickMiner(); break;
         case("autoClicker"): buyAutoClicker(); break;
         default: {
             var data = {

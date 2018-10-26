@@ -33,10 +33,10 @@ function buyClickFactory() {
             clickFactorySpacer.style.display = "none";
         }else {
             var nextClickFactoryLevel = clickFactoryLevel + 1;
-            var nextclickFactoryPrice = clickFactoryLevelData[clickFactoryLevel].price;
+            var nextClickFactoryPrice = clickFactoryLevelData[clickFactoryLevel].price;
 
             clickFactoryCardTitle.innerText = "Click Factory (Lvl. " + nextClickFactoryLevel + ")";
-            clickFactoryCardPrice.innerText = "Buy (" + nextclickFactoryPrice  + " Clicks)";
+            clickFactoryCardPrice.innerText = "Buy (" + nextClickFactoryPrice  + " Clicks)";
         }
 
         playSound("buy");

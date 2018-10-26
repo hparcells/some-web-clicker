@@ -47,7 +47,7 @@
     <body>
         <!-- The Actual Game -->
         <div id="game">
-            <h1>Some Web Clicker (0.9.0)</h1>
+            <h1>Some Web Clicker (0.10.0)</h1>
 
             <h3 id="clickCount">Clicks: 0</h3>
             <button id="clicker" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
@@ -100,6 +100,18 @@
                     </div>
                     <div id="clickFactorySpacer" class="mdl-layout-spacer"></div>
 
+                    <div id="clickMinerCard" class="shopCard card-wide mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col-desktop mdl-cell--4-col-tablet">
+                        <div id="clickMinerCardImage" class="mdl-card__title"></div>
+                        <div class="mdl-card__supporting-text">
+                            <h3 id="clickMinerCardTitle">Click Miner (Lvl. 1)</h3>
+                            <p>Gives a random amount of clicks between a certain maximum and minimum amount of clicks every ten seconds.</p>
+                        </div>
+                        <div class="mdl-card__actions mdl-card--border">
+                            <a id="clickMinerCardPrice" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" onclick="buy('clickMiner')">Buy (1000 Clicks)</a>
+                        </div>
+                    </div>
+                    <div id="clickMinerSpacer" class="mdl-layout-spacer"></div>
+
                     <div id="autoClickerCard" class="shopCard card-wide mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col-desktop mdl-cell--4-col-tablet">
                         <div id="autoClickerCardImage" class="mdl-card__title"></div>
                         <div class="mdl-card__supporting-text">
@@ -129,11 +141,13 @@
         <script src="./js/clickHandler.js"></script>
         <script src="./js/upgradeHandler.js"></script>
         <script src="./js/soundHandler.js"></script>
+        <script src="./js/util.js"></script>
 
         <!-- Upgrades -->
-        <script src="./js/upgrades/click-bomb.js"></script>
         <script src="./js/upgrades/per-click.js"></script>
+        <script src="./js/upgrades/click-bomb.js"></script>
         <script src="./js/upgrades/click-factory.js"></script>
+        <script src="./js/upgrades/click-miner.js"></script>
         <script src="./js/upgrades/auto-clicker.js"></script>
     </body>
 </html>
