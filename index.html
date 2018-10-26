@@ -126,14 +126,45 @@
                 </div>
             </div>
 
+            <span>
+                <a id="changelogButton" href="./changelog/">
+                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Changelog</button>
+                </a>
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="showStats()">Stats</button>
+
+                <br><br>
+
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="saveGame()">Overwrite Save</button>
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button mdl-color--red-600" onclick="deleteSave()">Delete Save</button>
+            </span>
+
+            <dialog id="statsDialog" class="mdl-dialog">
+                <h3 class="mdl-dialog__title">Your Stats</h3>
+                <div class="mdl-dialog__content">
+                    <p id="highestClicks"></p>
+                    <p id="totalClicks"></p>
+                    <p id="upgradesBought"></p>
+                </div>
+                <div class="mdl-dialog__actions">
+                    <button id="statsOkay" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Okay</button>
+                </div>
+            </dialog>
+
+            <dialog id="deleteSaveDialog" class="mdl-dialog">
+                <h3 class="mdl-dialog__title">Delete Save?</h3>
+                <div class="mdl-dialog__content">
+                    <p><u><b>Are you sure</b></u> you want to delete your save? This will reload the page after.</p>
+                </div>
+                <div class="mdl-dialog__actions">
+                    <button id="yesDelete" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button mdl-color--red-600">Yes</button>
+                    <button id="noDelete" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">No</button>
+                </div>
+            </dialog>
+
             <div id="snackbar" class="mdl-js-snackbar mdl-snackbar">
                 <div class="mdl-snackbar__text"></div>
                 <button class="mdl-snackbar__action" type="button"></button>
             </div>
-            
-            <a id="changelogButton" href="./changelog/">
-                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Changelog</button>
-            </a>
         </div>
 
 
@@ -142,6 +173,9 @@
         <script src="./js/upgradeHandler.js"></script>
         <script src="./js/soundHandler.js"></script>
         <script src="./js/util.js"></script>
+        <script src="./js/saveHandler.js"></script>
+        <script src="./js/load.js"></script>
+        <script src="./js/stats.js"></script>
 
         <!-- Upgrades -->
         <script src="./js/upgrades/per-click.js"></script>

@@ -41,6 +41,8 @@ function buyAutoClicker() {
             autoClickerCardPrice.innerText = "Buy (" + nextAutoClickerPrice  + " Clicks)";
         }
 
+        upgradesBought++;
+        
         playSound("buy");
         console.log(`Bought Upgrade: Auto Clicker, Level: ${autoClickerLevel}.`);
     }else {

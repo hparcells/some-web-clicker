@@ -39,6 +39,8 @@ function buyClickMiner() {
             clickMinerCardPrice.innerText = "Buy (" + nextClickMinerPrice  + " Clicks)";
         }
 
+        upgradesBought++;
+        
         playSound("buy");
         console.log(`Bought Upgrade: Click Miner, Level: ${clickMinerLevel}.`);
     }else {

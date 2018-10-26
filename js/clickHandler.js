@@ -5,6 +5,12 @@ var clickCount = document.getElementById("clickCount");
 
 document.getElementById("clicker").addEventListener("click", function() {
     clicks += perClick;
-    document.getElementById("clickCount").innerText = `Clicks: ${clicks}`;
+    clickCount.innerText = `Clicks: ${clicks}`;
+    
+    totalClicks++;
+    if(clicks > highestClicks) {
+        highestClicks = clicks;
+    }
+
     playSound("click");
 });
