@@ -7,11 +7,11 @@ var clickFactoryLevel = 0;
 var clickFactoryInterval;
 
 var clickFactoryLevelData = [
-    {level: 1, price: 1000, perTwentySeconds: 1000},
-    {level: 2, price: 2000, perTwentySeconds: 1500},
-    {level: 3, price: 3000, perTwentySeconds: 2000},
-    {level: 4, price: 5000, perTwentySeconds: 3000},
-    {level: 5, price: 8000, perTwentySeconds: 5000}
+    {level: 1, price: 1000, perTwentySeconds: 500},
+    {level: 2, price: 2000, perTwentySeconds: 1000},
+    {level: 3, price: 3000, perTwentySeconds: 1500},
+    {level: 4, price: 5000, perTwentySeconds: 2000},
+    {level: 5, price: 8000, perTwentySeconds: 2500}
 ];
 
 function buyClickFactory() {
