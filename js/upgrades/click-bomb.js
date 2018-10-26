@@ -20,7 +20,7 @@ function buyClickBomb() {
         clickCount.innerText = `Clicks: ${clicks}`;
         
         clearInterval(clickBombInterval);
-        var clickBombNewPerFiveSeconds = clickBombLevelData[clickBombLevel].perFiveSeconds
+        var clickBombNewPerFiveSeconds = clickBombLevelData[clickBombLevel].perFiveSeconds;
         clickBombInterval = setInterval(function() {
             clicks += clickBombNewPerFiveSeconds;
             clickCount.innerText = `Clicks: ${clicks}`;
@@ -36,7 +36,7 @@ function buyClickBomb() {
             var nextClickBombPrice = clickBombLevelData[clickBombLevel].price;
 
             clickBombCardTitle.innerText = "Click Bomb (Lvl. " + nextClickBombLevel + ")";
-            clickBombCardPrice.innerText = "Buy (" + nextClickBombPrice  + " Clicks)"
+            clickBombCardPrice.innerText = "Buy (" + nextClickBombPrice  + " Clicks)";
         }
 
         playSound("buy");

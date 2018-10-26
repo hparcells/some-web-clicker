@@ -38,7 +38,7 @@ function buyPerClick() {
             var nextPerClickPrice = perClickLevelData[perClickLevel].price;
 
             perClickCardTitle.innerText = "Per Click (Lvl. " + nextPerClickLevel + ")";
-            perClickCardPrice.innerText = "Buy (" + nextPerClickPrice + " Clicks)"
+            perClickCardPrice.innerText = "Buy (" + nextPerClickPrice + " Clicks)";
         }
 
         playSound("buy");

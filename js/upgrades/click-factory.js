@@ -36,7 +36,7 @@ function buyClickFactory() {
             var nextclickFactoryPrice = clickFactoryLevelData[clickFactoryLevel].price;
 
             clickFactoryCardTitle.innerText = "Click Factory (Lvl. " + nextClickFactoryLevel + ")";
-            clickFactoryCardPrice.innerText = "Buy (" + nextclickFactoryPrice  + " Clicks)"
+            clickFactoryCardPrice.innerText = "Buy (" + nextclickFactoryPrice  + " Clicks)";
         }
 
         playSound("buy");

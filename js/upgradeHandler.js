@@ -8,7 +8,7 @@ function buy(upgrade) {
         case("autoClicker"): buyAutoClicker(); break;
         default: {
             var data = {
-                message: `Upgrade ${upgrade} Not Found!`,
+                message: `Upgrade "${upgrade}" Not Found!`,
                 timeout: 2000
             };
             snackbar.MaterialSnackbar.showSnackbar(data);

@@ -38,7 +38,7 @@ function buyAutoClicker() {
             var nextAutoClickerPrice =  autoClickerLevelData[autoClickerLevel].price;
 
             autoClickerCardTitle.innerText = "Auto Clicker (Lvl. " + nextAutoClickerLevel + ")";
-            autoClickerCardPrice.innerText = "Buy (" + nextAutoClickerPrice  + " Clicks)"
+            autoClickerCardPrice.innerText = "Buy (" + nextAutoClickerPrice  + " Clicks)";
         }
 
         playSound("buy");
