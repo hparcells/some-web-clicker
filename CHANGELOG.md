@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## Modern Some Web Clicker [0.6.0 - 0.10.0]
 ### Unreleased [10/26/2018]
 #### Additions
-- Game data saving.
+- Game data saving including autosaving and saving before the page closes.
 - Ability to delete save.
 - Stats.
 - Partial save data loading.

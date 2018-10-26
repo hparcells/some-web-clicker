@@ -154,6 +154,7 @@
                 <h3 class="mdl-dialog__title">Delete Save?</h3>
                 <div class="mdl-dialog__content">
                     <p><u><b>Are you sure</b></u> you want to delete your save? This will reload the page after.</p>
+                    <p>This will delete all game progress including stats.</p>
                 </div>
                 <div class="mdl-dialog__actions">
                     <button id="yesDelete" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button mdl-color--red-600">Yes</button>
@@ -166,7 +167,6 @@
                 <button class="mdl-snackbar__action" type="button"></button>
             </div>
         </div>
-
 
         <!-- Game Scripts -->
         <script src="./js/clickHandler.js"></script>
@@ -183,5 +183,11 @@
         <script src="./js/upgrades/click-factory.js"></script>
         <script src="./js/upgrades/click-miner.js"></script>
         <script src="./js/upgrades/auto-clicker.js"></script>
+
+        <script>
+            window.addEventListener('beforeunload', function() {
+                saveGame();
+            });
+        </script>
     </body>
 </html>
