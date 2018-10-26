@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## Modern Some Web Clicker [0.6.0 - 0.9.0]
 ### Unreleased [10/25/2018]
 #### Additions
-- Added click and buy sounds.
+- Added click and buy sounds that only play on desktops. This is because there is a delay on mobile that lags the game.
 
 #### Known Bugs
 - Changing the clicker button text breaks the ripple.
