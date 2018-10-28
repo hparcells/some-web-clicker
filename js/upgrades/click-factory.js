@@ -51,3 +51,27 @@ function buyClickFactory() {
         snackbar.MaterialSnackbar.showSnackbar(data);
     }
 }
+
+function loadClickFactory() {
+    if(clickFactoryLevel === 0) {
+        return;
+    }
+
+    var index = clickFactoryLevel - 1;
+    var clickFactoryNewPerTwentySeconds = clickFactoryLevelData[index].perTwentySeconds;
+    clickFactoryInterval = setInterval(function() {
+        clicks += clickFactoryNewPerTwentySeconds;
+        clickCount.innerText = `Clicks: ${clicks}`;
+    }, 20000);
+
+    if(clickFactoryLevel >= clickFactoryLevelData.length) {
+        clickFactoryCard.style.display = "none";
+        clickFactorySpacer.style.display = "none";
+    }else {
+        var nextClickFactoryLevel = clickFactoryLevel + 1;
+        var nextClickFactoryPrice = clickFactoryLevelData[clickFactoryLevel].price;
+
+        clickFactoryCardTitle.innerText = "Click Factory (Lvl. " + nextClickFactoryLevel + ")";
+        clickFactoryCardPrice.innerText = "Buy (" + nextClickFactoryPrice  + " Clicks)";
+    }
+}

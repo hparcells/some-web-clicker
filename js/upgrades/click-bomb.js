@@ -51,3 +51,27 @@ function buyClickBomb() {
         snackbar.MaterialSnackbar.showSnackbar(data);
     }
 }
+
+function loadClickBomb() {
+    if(clickBombLevel === 0) {
+        return;
+    }
+
+    var index = clickBombLevel - 1;
+    var clickBombNewPerFiveSeconds = clickBombLevelData[index].perFiveSeconds;
+    clickBombInterval = setInterval(function() {
+        clicks += clickBombNewPerFiveSeconds;
+        clickCount.innerText = `Clicks: ${clicks}`;
+    }, 5000);
+
+    if(clickBombLevel >= clickBombLevelData.length) {
+        clickBombCard.style.display = "none";
+        clickBombSpacer.style.display = "none";
+    }else {
+        var nextClickBombLevel = clickBombLevel + 1;
+        var nextClickBombPrice = clickBombLevelData[clickBombLevel].price;
+
+        clickBombCardTitle.innerText = "Click Bomb (Lvl. " + nextClickBombLevel + ")";
+        clickBombCardPrice.innerText = "Buy (" + nextClickBombPrice  + " Clicks)";
+    }
+}

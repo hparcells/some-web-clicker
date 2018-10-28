@@ -1,5 +1,7 @@
 var deleteSaveDialog = document.getElementById("deleteSaveDialog");
 
+var save = true;
+
 function saveGame() {
     console.log("Saving...");
 
@@ -35,7 +37,17 @@ function loadGame() {
     clickCount.innerText = `Clicks: ${clicks}`;
 
     // Upgrades
+    perClickLevel = Number(localStorage.perClickLevel);
+    clickBombLevel = Number(localStorage.clickBombLevel);
+    clickFactoryLevel = Number(localStorage.clickFactoryLevel);
+    clickMinerLevel = Number(localStorage.clickMinerLevel);
+    autoClickerLevel = Number(localStorage.autoClickerLevel);
 
+    loadPerClick();
+    loadClickBomb();
+    loadClickFactory();
+    loadClickMiner();
+    loadAutoClicker();
 
     // Stats
     highestClicks = Number(localStorage.highestClicks);
@@ -48,14 +60,25 @@ function loadGame() {
 function deleteSave() {
     deleteSaveDialog.style.display = "block";
 
-    document.getElementById("yesDelete").addEventListener('click', function() {
+    document.getElementById("yesDelete").addEventListener("click", function() {
         console.log("Deleting save...");
+
         localStorage.clear();
+        save = false;
+
         console.log("Save deleted, reloading...");
         location.reload();
     });
 
-    document.getElementById("noDelete").addEventListener('click', function() {
+    document.getElementById("noDelete").addEventListener("click", function() {
         deleteSaveDialog.style.display = "none";
     });
 }
+
+window.addEventListener('beforeunload', function() {
+    if(!save) {
+        return;
+    }
+
+    saveGame();
+});

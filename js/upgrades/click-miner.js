@@ -51,3 +51,27 @@ function buyClickMiner() {
         snackbar.MaterialSnackbar.showSnackbar(data);
     }
 }
+
+function loadClickMiner() {
+    if(clickMinerLevel === 0) {
+        return;
+    }
+
+    var index = clickMinerLevel - 1;
+    clickMinerInterval = setInterval(function() {
+        var toAdd = generateNumberBetween(clickMinerLevelData[index].low, clickMinerLevelData[index].high);
+        clicks += toAdd;
+        clickCount.innerText = `Clicks: ${clicks}`;
+    }, 10000);
+
+    if(clickMinerLevel >= clickMinerLevelData.length) {
+        clickMinerCard.style.display = "none";
+        clickMinerSpacer.style.display = "none";
+    }else {
+        var nextClickMinerLevel = clickMinerLevel + 1;
+        var nextClickMinerPrice = clickMinerLevelData[clickMinerLevel].price;
+
+        clickMinerCardTitle.innerText = "Click Miner (Lvl. " + nextClickMinerLevel + ")";
+        clickMinerCardPrice.innerText = "Buy (" + nextClickMinerPrice  + " Clicks)";
+    }
+}

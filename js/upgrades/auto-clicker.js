@@ -53,3 +53,28 @@ function buyAutoClicker() {
         snackbar.MaterialSnackbar.showSnackbar(data);
     }
 }
+
+function loadAutoClicker() {
+    if(autoClickerLevel === 0) {
+        return;
+    }
+
+    var index = autoClickerLevel - 1;
+    var per = autoClickerLevelData[index].perSecond / 10;
+    autoClickerInterval = setInterval(function() {
+        clicks += per;
+        clicks = Number(clicks.toFixed(2));
+        clickCount.innerText = `Clicks: ${clicks}`;
+    }, 100);
+
+    if(autoClickerLevel >= autoClickerLevelData.length) {
+        autoClickerCard.style.display =  "none";
+        autoClickerSpacer.style.display = "none";
+    }else {
+        var nextAutoClickerLevel = autoClickerLevel + 1;
+        var nextAutoClickerPrice =  autoClickerLevelData[autoClickerLevel].price;
+
+        autoClickerCardTitle.innerText = "Auto Clicker (Lvl. " + nextAutoClickerLevel + ")";
+        autoClickerCardPrice.innerText = "Buy (" + nextAutoClickerPrice  + " Clicks)";
+    }
+}

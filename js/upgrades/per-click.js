@@ -28,6 +28,9 @@ function buyPerClick() {
         perClick = perClickLevelData[perClickLevel].perClick;
         clicker.innerText = "+" + perClick + " Clicks";
 
+        clicker.classList.remove("mdl-js-ripple-effect");
+        clicker.classList.add("mdl-js-ripple-effect");
+        
         perClickLevel++;
         
         if(perClickLevel >= perClickLevelData.length) {
@@ -51,5 +54,26 @@ function buyPerClick() {
             timeout: 2000
         };
         snackbar.MaterialSnackbar.showSnackbar(data);
+    }
+}
+
+function loadPerClick() {
+    if(perClickLevel === 0) {
+        return;
+    }
+
+    var index = perClickLevel - 1;
+    perClick = perClickLevelData[index].perClick;
+    clicker.innerText = "+" + perClick + " Clicks";
+
+    if(perClickLevel >= perClickLevelData.length) {
+        perClickCard.style.display = "none";
+        perClickSpacer.style.display = "none";
+    }else {
+        var nextPerClickLevel = perClickLevel + 1;
+        var nextPerClickPrice = perClickLevelData[perClickLevel].price;
+
+        perClickCardTitle.innerText = "Per Click (Lvl. " + nextPerClickLevel + ")";
+        perClickCardPrice.innerText = "Buy (" + nextPerClickPrice + " Clicks)";
     }
 }
