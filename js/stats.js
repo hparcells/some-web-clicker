@@ -12,9 +12,9 @@ function showStats() {
     totalClicksText.innerText = "Total Mouse Clicks: " + totalClicks;
     upgradesBoughtText.innerText = "Upgrades Bought: " + upgradesBought;
 
-    statsDialog.showModal();
+    statsDialog.style.display = "block";
 
-    document.getElementById("statsOkay").addEventListener('click', function() {
-        statsDialog.close();
+    document.getElementById("statsOkay").addEventListener("click", function() {
+        statsDialog.style.display = "none";
     });
 }

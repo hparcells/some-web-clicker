@@ -35,6 +35,7 @@
         <!-- Stylesheets -->
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/material.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.light_blue-indigo.min.css">
 
@@ -138,29 +139,30 @@
                 <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button mdl-color--red-600" onclick="deleteSave()">Delete Save</button>
             </span>
 
-            <dialog id="statsDialog" class="mdl-dialog">
-                <h3 class="mdl-dialog__title">Your Stats</h3>
-                <div class="mdl-dialog__content">
-                    <p id="highestClicks"></p>
-                    <p id="totalClicks"></p>
-                    <p id="upgradesBought"></p>
-                </div>
-                <div class="mdl-dialog__actions">
-                    <button id="statsOkay" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Okay</button>
-                </div>
-            </dialog>
+            <div id="statsDialog" class="w3-modal">
+                <div class="w3-modal-content">
+                    <div class="w3-container">                        
+                        <p id="highestClicks"></p>
+                        <p id="totalClicks"></p>
+                        <p id="upgradesBought"></p>
 
-            <dialog id="deleteSaveDialog" class="mdl-dialog">
-                <h3 class="mdl-dialog__title">Delete Save?</h3>
-                <div class="mdl-dialog__content">
-                    <p><u><b>Are you sure</b></u> you want to delete your save? This will reload the page after.</p>
-                    <p>This will delete all game progress including stats.</p>
+                        <button id="statsOkay" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Okay</button>
+                    </div>
                 </div>
-                <div class="mdl-dialog__actions">
-                    <button id="yesDelete" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button mdl-color--red-600">Yes</button>
-                    <button id="noDelete" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">No</button>
+            </div>
+
+            <div id="deleteSaveDialog" class="w3-modal">
+                <div class="w3-modal-content">
+                    <div class="w3-container">
+                        <h3>Delete Save?</h3>                      
+                        <p><u><b>Are you sure</b></u> you want to delete your save? This will reload the page after.</p>
+                        <p>This will delete all game progress including stats.</p>
+
+                        <button id="yesDelete" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button mdl-color--red-600">Yes</button>
+                        <button id="noDelete" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">No</button>
+                    </div>
                 </div>
-            </dialog>
+            </div>
 
             <div id="snackbar" class="mdl-js-snackbar mdl-snackbar">
                 <div class="mdl-snackbar__text"></div>

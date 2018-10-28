@@ -36,6 +36,7 @@ function loadGame() {
 
     // Upgrades
 
+
     // Stats
     highestClicks = Number(localStorage.highestClicks);
     totalClicks = Number(localStorage.totalClicks);
@@ -45,7 +46,7 @@ function loadGame() {
 }
 
 function deleteSave() {
-    deleteSaveDialog.showModal();
+    deleteSaveDialog.style.display = "block";
 
     document.getElementById("yesDelete").addEventListener('click', function() {
         console.log("Deleting save...");
@@ -55,6 +56,6 @@ function deleteSave() {
     });
 
     document.getElementById("noDelete").addEventListener('click', function() {
-        deleteSaveDialog.close();
+        deleteSaveDialog.style.display = "none";
     });
 }
