@@ -1,7 +1,8 @@
+var clickCount = document.getElementById("clickCount");
+
 var clicks = 0;
 var perClick = 1;
-
-var clickCount = document.getElementById("clickCount");
+var clickSound = "defaultClick";
 
 document.getElementById("clicker").addEventListener("click", function() {
     clicks += perClick;
@@ -12,5 +13,5 @@ document.getElementById("clicker").addEventListener("click", function() {
         highestClicks = clicks;
     }
 
-    playSound("click");
+    playSound(clickSound);
 });
