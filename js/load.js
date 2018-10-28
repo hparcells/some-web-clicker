@@ -8,4 +8,4 @@ window.onload = function() {
     }, 60000);
 
     console.log("Ready!");
-}
+};

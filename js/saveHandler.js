@@ -18,7 +18,7 @@ function saveGame() {
     // Stats
     localStorage.setItem("highestClicks", highestClicks);
     localStorage.setItem("totalClicks", totalClicks);
-    localStorage.setItem("upgradesBought", upgradesBought)
+    localStorage.setItem("upgradesBought", upgradesBought);
 
     console.log("Saved!");
     console.log(localStorage);
@@ -75,7 +75,7 @@ function deleteSave() {
     });
 }
 
-window.addEventListener('beforeunload', function() {
+window.addEventListener("beforeunload", function() {
     if(!save) {
         return;
     }
