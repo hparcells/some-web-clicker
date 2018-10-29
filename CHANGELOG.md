@@ -4,8 +4,8 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## Modern Some Web Clicker [0.6.0 - 0.11.0]
-### Unreleased [10/29/2018]
+## Modern Some Web Clicker [0.6.0 - 0.12.0]
+### 0.12.0 [10/29/2018]
 #### Additions
 - Cases
     - Click Sound case.
@@ -21,7 +21,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 #### Known Bugs
 - Changing the clicker button text breaks the ripple.
-- Doesn't save case progress yet.
+- Having multiple cases (more than six) then opening a few may break the way the case cards look.
+- The button to close the case dialog is too far to the left. 
 
 ### 0.11.0 [10/28/2018]
 #### Additions

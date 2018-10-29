@@ -27,7 +27,7 @@ function saveGame() {
 
     // Cases
     localStorage.setItem("casesInventory", casesInventory);
-    localStorage.setItem("caseData", caseData);
+    localStorage.setItem("caseData", JSON.stringify(caseData));
 
     console.log("Saved!");
     console.log(localStorage);
@@ -48,10 +48,14 @@ function loadGame() {
     console.log("Found save data, loading...");
 
     // Clicks
+    console.log("Loading click count...");
+
     clicks = Number(localStorage.clicks);
     clickCount.innerText = `Clicks: ${clicks}`;
 
     // Upgrades
+    console.log("Loading upgrades...");
+
     perClickLevel = Number(localStorage.perClickLevel);
     clickBombLevel = Number(localStorage.clickBombLevel);
     clickFactoryLevel = Number(localStorage.clickFactoryLevel);
@@ -67,19 +71,29 @@ function loadGame() {
     checkAllMax();
 
     // Stats
+    console.log("Loading stats...");
+
     highestClicks = Number(localStorage.highestClicks);
     totalClicks = Number(localStorage.totalClicks);
     upgradesBought = Number(localStorage.upgradesBought);
     casesOpened = Number(localStorage.casesOpened);
     
-    // Sounds and Settings
+    // Sounds
+    console.log("Loading sounds...");
+
     unlockedClickSounds = localStorage.unlockedClickSounds.split(",");
+
+    // Settings
+    console.log("Loading settings...");
+    
     clickSound = localStorage.clickSound;
 
     // Cases
-    casesInventory = localStorage.casesInventory.split(",");
-    // caseData = localStorage.caseData;
-    loadCases();
+    if(localStorage.casesInventory !== "") {
+        casesInventory = localStorage.casesInventory.split(",");
+        loadCases();
+    }
+    caseData = JSON.parse(localStorage.caseData);
 
     console.log("Save data loaded!");
 }

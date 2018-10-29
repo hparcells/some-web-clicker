@@ -133,6 +133,8 @@ function showCase(caseName, caseID, caseCardDescription) {
 }
 
 function loadCases() {
+    console.log("Loading cases...");
+
     for(x in casesInventory) {
         switch(caseIdify(casesInventory[x])) {
             case("soundCase"): {
@@ -148,6 +150,7 @@ function loadCases() {
             }
         }
     }
+    
     caseUpdate();
 }
 
