@@ -5,6 +5,7 @@ var clickMinerSpacer = document.getElementById("clickMinerSpacer");
 
 var clickMinerLevel = 0;
 var clickMinerInterval;
+var clickMinerMax = false;
 
 var clickMinerLevelData = [
     {level: 1, price: 1000, high: 100, low: 50},
@@ -24,6 +25,9 @@ function buyClickMiner() {
             var toAdd = generateNumberBetween(clickMinerLevelData[clickMinerLevel - 1].low, clickMinerLevelData[clickMinerLevel - 1].high);
             clicks += toAdd;
             clickCount.innerText = `Clicks: ${clicks}`;
+
+            checkCases();
+            checkStats();
         }, 10000);
 
         clickMinerLevel++;
@@ -31,6 +35,8 @@ function buyClickMiner() {
         if(clickMinerLevel >= clickMinerLevelData.length) {
             clickMinerCard.style.display = "none";
             clickMinerSpacer.style.display = "none";
+
+            clickMinerMax = true;
         }else {
             var nextClickMinerLevel = clickMinerLevel + 1;
             var nextClickMinerPrice = clickMinerLevelData[clickMinerLevel].price;
@@ -62,11 +68,16 @@ function loadClickMiner() {
         var toAdd = generateNumberBetween(clickMinerLevelData[index].low, clickMinerLevelData[index].high);
         clicks += toAdd;
         clickCount.innerText = `Clicks: ${clicks}`;
+
+        checkCases();
+        checkStats();
     }, 10000);
 
     if(clickMinerLevel >= clickMinerLevelData.length) {
         clickMinerCard.style.display = "none";
         clickMinerSpacer.style.display = "none";
+        
+        clickMinerMax = true;
     }else {
         var nextClickMinerLevel = clickMinerLevel + 1;
         var nextClickMinerPrice = clickMinerLevelData[clickMinerLevel].price;

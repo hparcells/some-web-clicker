@@ -1,3 +1,5 @@
+var snackbar = document.getElementById("snackbar");
+
 window.onload = function() {
     console.log("Loading...");
 

@@ -1,6 +1,6 @@
 var deleteSaveDialog = document.getElementById("deleteSaveDialog");
 
-var save = true;
+var saveOnReload = true;
 
 function saveGame() {
     console.log("Saving...");
@@ -19,9 +19,24 @@ function saveGame() {
     localStorage.setItem("highestClicks", highestClicks);
     localStorage.setItem("totalClicks", totalClicks);
     localStorage.setItem("upgradesBought", upgradesBought);
+    localStorage.setItem("casesOpened", casesOpened);
+
+    // Sounds and Settings
+    localStorage.setItem("unlockedClickSounds", unlockedClickSounds);
+    localStorage.setItem("clickSound", clickSound);
+
+    // Cases
+    localStorage.setItem("casesInventory", casesInventory);
+    localStorage.setItem("caseData", caseData);
 
     console.log("Saved!");
     console.log(localStorage);
+
+    var data = {
+        message: "Saved!",
+        timeout: 2000
+    };
+    snackbar.MaterialSnackbar.showSnackbar(data);
 }
 
 function loadGame() {
@@ -49,10 +64,22 @@ function loadGame() {
     loadClickMiner();
     loadAutoClicker();
 
+    checkAllMax();
+
     // Stats
     highestClicks = Number(localStorage.highestClicks);
     totalClicks = Number(localStorage.totalClicks);
     upgradesBought = Number(localStorage.upgradesBought);
+    casesOpened = Number(localStorage.casesOpened);
+    
+    // Sounds and Settings
+    unlockedClickSounds = localStorage.unlockedClickSounds.split(",");
+    clickSound = localStorage.clickSound;
+
+    // Cases
+    casesInventory = localStorage.casesInventory.split(",");
+    // caseData = localStorage.caseData;
+    loadCases();
 
     console.log("Save data loaded!");
 }
@@ -64,7 +91,7 @@ function deleteSave() {
         console.log("Deleting save...");
 
         localStorage.clear();
-        save = false;
+        saveOnReload = false;
 
         console.log("Save deleted, reloading...");
         location.reload();
@@ -76,7 +103,7 @@ function deleteSave() {
 }
 
 window.addEventListener("beforeunload", function() {
-    if(!save) {
+    if(!saveOnReload) {
         return;
     }
 

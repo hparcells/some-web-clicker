@@ -5,6 +5,7 @@ var autoClickerSpacer = document.getElementById("autoClickerSpacer");
 
 var autoClickerLevel = 0;
 var autoClickerInterval;
+var autoClickerMax = false;
 
 var autoClickerLevelData = [
     {level: 1, price: 2500, perSecond: 2},
@@ -26,6 +27,9 @@ function buyAutoClicker() {
             clicks += per;
             clicks = Number(clicks.toFixed(2));
             clickCount.innerText = `Clicks: ${clicks}`;
+
+            checkCases();
+            checkStats();
         }, 100);
 
         autoClickerLevel++;
@@ -33,6 +37,8 @@ function buyAutoClicker() {
         if(autoClickerLevel >= autoClickerLevelData.length) {
             autoClickerCard.style.display =  "none";
             autoClickerSpacer.style.display = "none";
+
+            autoClickerMax = true;
         }else {
             var nextAutoClickerLevel = autoClickerLevel + 1;
             var nextAutoClickerPrice =  autoClickerLevelData[autoClickerLevel].price;
@@ -65,11 +71,16 @@ function loadAutoClicker() {
         clicks += per;
         clicks = Number(clicks.toFixed(2));
         clickCount.innerText = `Clicks: ${clicks}`;
+
+        checkCases();
+        checkStats();
     }, 100);
 
     if(autoClickerLevel >= autoClickerLevelData.length) {
         autoClickerCard.style.display =  "none";
         autoClickerSpacer.style.display = "none";
+
+        autoClickerMax = true;
     }else {
         var nextAutoClickerLevel = autoClickerLevel + 1;
         var nextAutoClickerPrice =  autoClickerLevelData[autoClickerLevel].price;

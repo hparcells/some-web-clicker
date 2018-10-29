@@ -5,6 +5,7 @@ var clickFactorySpacer = document.getElementById("clickFactorySpacer");
 
 var clickFactoryLevel = 0;
 var clickFactoryInterval;
+var clickFactoryMax = false;
 
 var clickFactoryLevelData = [
     {level: 1, price: 1000, perTwentySeconds: 500},
@@ -24,6 +25,9 @@ function buyClickFactory() {
         clickFactoryInterval = setInterval(function() {
             clicks += clickFactoryNewPerTwentySeconds;
             clickCount.innerText = `Clicks: ${clicks}`;
+
+            checkCases();
+            checkStats();
         }, 20000);
 
         clickFactoryLevel++;
@@ -31,6 +35,8 @@ function buyClickFactory() {
         if(clickFactoryLevel >= clickFactoryLevelData.length) {
             clickFactoryCard.style.display = "none";
             clickFactorySpacer.style.display = "none";
+
+            clickFactoryMax = true;
         }else {
             var nextClickFactoryLevel = clickFactoryLevel + 1;
             var nextClickFactoryPrice = clickFactoryLevelData[clickFactoryLevel].price;
@@ -62,11 +68,16 @@ function loadClickFactory() {
     clickFactoryInterval = setInterval(function() {
         clicks += clickFactoryNewPerTwentySeconds;
         clickCount.innerText = `Clicks: ${clicks}`;
+
+        checkCases();
+        checkStats();
     }, 20000);
 
     if(clickFactoryLevel >= clickFactoryLevelData.length) {
         clickFactoryCard.style.display = "none";
         clickFactorySpacer.style.display = "none";
+
+        clickFactoryMax = true;
     }else {
         var nextClickFactoryLevel = clickFactoryLevel + 1;
         var nextClickFactoryPrice = clickFactoryLevelData[clickFactoryLevel].price;

@@ -62,7 +62,8 @@
             <!-- The Shop -->
             <div id="shop">
                 <h3>The Shop</h3>
-    
+                <h5 id="allMaxed" style="display: none">All Upgrades Maxed!</h5>
+
                 <div class="mdl-grid">
                     <div class="mdl-layout-spacer"></div>
                     <div id="perClickCard" class="shopCard card-wide mdl-card mdl-shadow--2dp mdl-cell mdl-cell--3-col-desktop mdl-cell--4-col-tablet">
@@ -127,11 +128,21 @@
                 </div>
             </div>
 
+            <div id="cases">
+                <h3>Cases</h3>
+                <h5 id="noCases">No Cases Yet!</h5>
+
+                <div id="caseList" class="mdl-grid">
+                    <div class="mdl-layout-spacer"></div>
+                </div>
+            </div>
+
             <span>
                 <a id="changelogButton" href="./changelog/">
                     <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Changelog</button>
                 </a>
                 <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="showStats()">Stats</button>
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" onclick="showSettings()">Settings</button>
 
                 <br><br>
 
@@ -139,14 +150,42 @@
                 <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button mdl-color--red-600" onclick="deleteSave()">Delete Save</button>
             </span>
 
+            <div id="caseDialog" class="w3-modal">
+                <div class="w3-modal-content">
+                    <div class="w3-container">
+                        <h3 id="openingCaseTitle">Opening Case</h3>
+                        <h5 id="youGot" style="display: none">You Got</h5>                      
+                        <p id="theItem"></p>
+                        
+                        <button id="caseOkay" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" style="display: none">Okay</button>
+                    </div>
+                </div>
+            </div>
+
             <div id="statsDialog" class="w3-modal">
                 <div class="w3-modal-content">
-                    <div class="w3-container">                        
+                    <div class="w3-container">
+                        <h3>Stats</h3>                     
                         <p id="highestClicks"></p>
                         <p id="totalClicks"></p>
                         <p id="upgradesBought"></p>
+                        <p id="casesOpened"></p>
 
                         <button id="statsOkay" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Okay</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="settingsDialog" class="w3-modal">
+                <div class="w3-modal-content">
+                    <div class="w3-container">
+                        <h3>Settings</h3>                        
+                        <div class="setting">
+                            <h5>Click Sound:</h5> 
+                            <select id="clickSounds" class="w3-select"></select>
+                        </div>
+
+                        <button id="settingsSave" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Save</button>
                     </div>
                 </div>
             </div>
@@ -178,6 +217,8 @@
         <script src="./js/save-handler.js"></script>
         <script src="./js/load.js"></script>
         <script src="./js/stats.js"></script>
+        <script src="./js/case-handler.js"></script>
+        <script src="./js/settings-handler.js"></script>
 
         <!-- Upgrades -->
         <script src="./js/upgrades/per-click.js"></script>
@@ -185,5 +226,8 @@
         <script src="./js/upgrades/click-factory.js"></script>
         <script src="./js/upgrades/click-miner.js"></script>
         <script src="./js/upgrades/auto-clicker.js"></script>
+
+        <!-- Cases -->
+        <script src="./js/cases/sound-case.js"></script>
     </body>
 </html>

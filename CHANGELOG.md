@@ -5,7 +5,25 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## Modern Some Web Clicker [0.6.0 - 0.11.0]
-### 0.11.0 [10/26/2018]
+### Unreleased [10/29/2018]
+#### Additions
+- Cases
+    - Click Sound case.
+        - Additional click sounds.
+- Now shows, "All Upgrades Maxed" when all upgrades are bought.
+- New Cases Opened stat.
+- Options menu.
+    - Click sound selecting.
+
+#### Fixes
+- Fixed text that is slightly off center.
+- Fixed highest clicks stat does not updating unless the user clicks it.
+
+#### Known Bugs
+- Changing the clicker button text breaks the ripple.
+- Doesn't save case progress yet.
+
+### 0.11.0 [10/28/2018]
 #### Additions
 - Saving
     - Game data saving including autosaving every minute and saving before the page closes.
@@ -15,6 +33,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 #### Known Bugs
 - Changing the clicker button text breaks the ripple.
+- Highest clicks stat does not update unless the user clicks it.
+- Text is slightly off center.
 
 ### 0.10.0 [10/26/2018]
 #### Additions

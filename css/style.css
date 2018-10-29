@@ -1,3 +1,12 @@
+*, *:before, *:after {
+    box-sizing: content-box !important;
+} 
+
+.setting {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
 .w3-modal-content {
     padding: 25px !important;
 }
@@ -30,4 +39,8 @@
 
 #autoClickerCardImage {
     background: url("../images/shop/coming-soon.png") center / cover; 
+}
+
+#soundCaseCardImage {
+    background: url("../images/cases/sound-case.png") center / cover; 
 }

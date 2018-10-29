@@ -5,6 +5,7 @@ var clickBombSpacer = document.getElementById("clickBombSpacer");
 
 var clickBombLevel = 0;
 var clickBombInterval;
+var clickBombMax = false;
 
 var clickBombLevelData = [
     {level: 1, price: 100, perFiveSeconds: 15},
@@ -24,6 +25,9 @@ function buyClickBomb() {
         clickBombInterval = setInterval(function() {
             clicks += clickBombNewPerFiveSeconds;
             clickCount.innerText = `Clicks: ${clicks}`;
+
+            checkCases();
+            checkStats();
         }, 5000);
         
         clickBombLevel++;
@@ -31,6 +35,8 @@ function buyClickBomb() {
         if(clickBombLevel >= clickBombLevelData.length) {
             clickBombCard.style.display = "none";
             clickBombSpacer.style.display = "none";
+
+            clickBombMax = true;
         }else {
             var nextClickBombLevel = clickBombLevel + 1;
             var nextClickBombPrice = clickBombLevelData[clickBombLevel].price;
@@ -62,11 +68,16 @@ function loadClickBomb() {
     clickBombInterval = setInterval(function() {
         clicks += clickBombNewPerFiveSeconds;
         clickCount.innerText = `Clicks: ${clicks}`;
+
+        checkCases();
+        checkStats();
     }, 5000);
 
     if(clickBombLevel >= clickBombLevelData.length) {
         clickBombCard.style.display = "none";
         clickBombSpacer.style.display = "none";
+
+        clickBombMax = true;
     }else {
         var nextClickBombLevel = clickBombLevel + 1;
         var nextClickBombPrice = clickBombLevelData[clickBombLevel].price;

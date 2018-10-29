@@ -1,4 +1,4 @@
-var snackbar = document.getElementById("snackbar");
+var allMaxed = document.getElementById("allMaxed");
 
 function buy(upgrade) {
     switch(upgrade) {
@@ -15,4 +15,18 @@ function buy(upgrade) {
             snackbar.MaterialSnackbar.showSnackbar(data);
         }
     }
+
+    checkAllMax();
+}
+
+function checkAllMax() {
+    if(allMax()) {
+        console.log("All upgrades maxed!");
+
+        allMaxed.style.display = "block";
+    }
+}
+
+function allMax() {
+    return perClickMax && clickBombMax && clickFactoryMax && clickMinerMax && autoClickerMax;
 }

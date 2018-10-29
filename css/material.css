@@ -9,3 +9,7 @@
 .card-wide > .mdl-card__menu {
     color: #fff;
 }
+
+.card-wide {
+    text-align: center !important;
+}
