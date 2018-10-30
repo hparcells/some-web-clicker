@@ -48,7 +48,7 @@
     <body>
         <!-- The Actual Game -->
         <div id="game">
-            <h1>Some Web Clicker (0.12.0)</h1>
+            <h1>Some Web Clicker (0.13.0)</h1>
 
             <h3 id="clickCount">Clicks: 0</h3>
             <button id="clicker" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
@@ -165,7 +165,7 @@
             <div id="statsDialog" class="w3-modal">
                 <div class="w3-modal-content">
                     <div class="w3-container">
-                        <h3>Stats</h3>                     
+                        <h3>Stats</h3>           
                         <p id="highestClicks"></p>
                         <p id="totalClicks"></p>
                         <p id="upgradesBought"></p>
@@ -183,6 +183,13 @@
                         <div class="setting">
                             <h5>Click Sound:</h5> 
                             <select id="clickSounds" class="w3-select"></select>
+
+                            <h5>Mobile Sounds</h5>
+                            <p>Due to the way mobile browser work, sounds will lag the game <b>a lot</b>. This has not been tested on all devices, but by default, there are no sounds on mobile unless enabled.</p>
+                            <label id="mobileSounds" class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="mobileSoundsCheckbox">
+                                <input type="checkbox" id="mobileSoundsCheckbox" class="mdl-checkbox__input">
+                                <span class="mdl-checkbox__label">Enable</span>
+                            </label>
                         </div>
 
                         <button id="settingsSave" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Save</button>

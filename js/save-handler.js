@@ -1,4 +1,5 @@
 var deleteSaveDialog = document.getElementById("deleteSaveDialog");
+var mobileSounds = document.getElementById("mobileSounds");
 
 var saveOnReload = true;
 
@@ -87,7 +88,7 @@ function loadGame() {
     console.log("Loading settings...");
     
     clickSound = localStorage.clickSound;
-
+    
     // Cases
     if(localStorage.casesInventory !== "") {
         casesInventory = localStorage.casesInventory.split(",");

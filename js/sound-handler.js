@@ -1,5 +1,5 @@
 function playSound(sound) {
-    if(innerWidth >= 840) {
+    if(innerWidth >= 840 || document.getElementById("mobileSoundsCheckbox").checked) {
         switch(sound) {
             case("defaultClickSound"): {
                 new Audio(`./sounds/click-sounds/${sound}.mp3`).play();

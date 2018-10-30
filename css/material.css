@@ -13,3 +13,11 @@
 .card-wide {
     text-align: center !important;
 }
+
+.mdl-checkbox {
+    display: inline !important;
+}
+
+.mdl-checkbox__label {
+    bottom: -5px;
+}
