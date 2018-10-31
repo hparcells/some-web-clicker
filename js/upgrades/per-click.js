@@ -18,7 +18,13 @@ var perClickLevelData = [
     {level: 8, price: 7500, perClick: 25},
     {level: 9, price: 10000, perClick: 50},
     {level: 10, price: 15000, perClick: 75},
-    {level: 11, price: 25000, perClick: 100}
+    {level: 11, price: 25000, perClick: 100},
+    {level: 12, price: 35000, perClick: 125},
+    {level: 13, price: 45000, perClick: 150},
+    {level: 14, price: 55000, perClick: 200},
+    {level: 15, price: 75000, perClick: 250},
+    {level: 16, price: 95000, perClick: 300},
+    {level: 17, price: 105000, perClick: 400}
 ];
 
 function buyPerClick() {

@@ -12,7 +12,12 @@ var clickFactoryLevelData = [
     {level: 2, price: 2000, perTwentySeconds: 1000},
     {level: 3, price: 3000, perTwentySeconds: 1500},
     {level: 4, price: 5000, perTwentySeconds: 2000},
-    {level: 5, price: 8000, perTwentySeconds: 2500}
+    {level: 5, price: 8000, perTwentySeconds: 2500},
+    {level: 6, price: 12000, perTwentySeconds: 3000},
+    {level: 7, price: 16000, perTwentySeconds: 3500},
+    {level: 8, price: 20000, perTwentySeconds: 4000},
+    {level: 9, price: 25000, perTwentySeconds: 4500},
+    {level: 10, price: 32000, perTwentySeconds: 5000},
 ];
 
 function buyClickFactory() {
@@ -28,6 +33,7 @@ function buyClickFactory() {
 
             checkCases();
             checkStats();
+            checkCases();
         }, 20000);
 
         clickFactoryLevel++;

@@ -12,7 +12,12 @@ var clickBombLevelData = [
     {level: 2, price: 250, perFiveSeconds: 25},
     {level: 3, price: 750, perFiveSeconds: 35},
     {level: 4, price: 1500, perFiveSeconds: 45},
-    {level: 4, price: 2500, perFiveSeconds: 55}
+    {level: 5, price: 2500, perFiveSeconds: 55},
+    {level: 6, price: 5000, perFiveSeconds: 55},
+    {level: 7, price: 7500, perFiveSeconds: 65},
+    {level: 8, price: 10000, perFiveSeconds: 75},
+    {level: 9, price: 15000, perFiveSeconds: 90},
+    {level: 10, price: 20000, perFiveSeconds: 100},
 ];
 
 function buyClickBomb() {
@@ -71,6 +76,7 @@ function loadClickBomb() {
 
         checkCases();
         checkStats();
+        checkCases();
     }, 5000);
 
     if(clickBombLevel >= clickBombLevelData.length) {

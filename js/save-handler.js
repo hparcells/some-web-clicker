@@ -15,6 +15,7 @@ function saveGame() {
     localStorage.setItem("clickFactoryLevel", clickFactoryLevel);
     localStorage.setItem("clickMinerLevel", clickMinerLevel);
     localStorage.setItem("autoClickerLevel", autoClickerLevel);
+    localStorage.setItem("clickPortalLevel", clickPortalLevel);
 
     // Stats
     localStorage.setItem("highestClicks", highestClicks);
@@ -62,12 +63,14 @@ function loadGame() {
     clickFactoryLevel = Number(localStorage.clickFactoryLevel);
     clickMinerLevel = Number(localStorage.clickMinerLevel);
     autoClickerLevel = Number(localStorage.autoClickerLevel);
+    clickPortalLevel = Number(localStorage.clickPortalLevel);
 
     loadPerClick();
     loadClickBomb();
     loadClickFactory();
     loadClickMiner();
     loadAutoClicker();
+    loadClickPortal();
 
     checkAllMax();
 

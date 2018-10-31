@@ -2,11 +2,30 @@ var allMaxed = document.getElementById("allMaxed");
 
 function buy(upgrade) {
     switch(upgrade) {
-        case("perClick"): buyPerClick(); break;
-        case("clickBomb"): buyClickBomb(); break;
-        case("clickFactory"): buyClickFactory(); break;
-        case("clickMiner"): buyClickMiner(); break;
-        case("autoClicker"): buyAutoClicker(); break;
+        case("perClick"): {
+            buyPerClick();
+        }
+        break;
+        case("clickBomb"): {
+            buyClickBomb();
+        }
+        break;
+        case("clickFactory"): {
+            buyClickFactory();
+        }
+        break;
+        case("clickMiner"): {
+            buyClickMiner();
+        }
+        break;
+        case("autoClicker"): {
+            buyAutoClicker();
+        }
+        break;
+        case("clickPortal"): {
+            buyClickPortal();
+        }
+        break;
         default: {
             var data = {
                 message: `Upgrade "${upgrade}" Not Found!`,
@@ -28,5 +47,5 @@ function checkAllMax() {
 }
 
 function allMax() {
-    return perClickMax && clickBombMax && clickFactoryMax && clickMinerMax && autoClickerMax;
+    return perClickMax && clickBombMax && clickFactoryMax && clickMinerMax && autoClickerMax && clickPortalMax;
 }

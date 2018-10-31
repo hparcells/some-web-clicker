@@ -12,7 +12,11 @@ var clickMinerLevelData = [
     {level: 2, price: 1500, high: 150, low: 100},
     {level: 3, price: 2000, high: 200, low: 150},
     {level: 4, price: 3000, high: 250, low: 200},
-    {level: 5, price: 5000, high: 500, low: 250}
+    {level: 5, price: 5000, high: 500, low: 250},
+    {level: 6, price: 7000, high: 750, low: 500},
+    {level: 7, price: 9000, high: 1000, low: 750},
+    {level: 8, price: 12000, high: 1500, low: 1000},
+    {level: 9, price: 15000, high: 2500, low: 1500},
 ];
 
 function buyClickMiner() {
@@ -71,6 +75,7 @@ function loadClickMiner() {
 
         checkCases();
         checkStats();
+        checkCases();
     }, 10000);
 
     if(clickMinerLevel >= clickMinerLevelData.length) {

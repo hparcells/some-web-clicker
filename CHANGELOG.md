@@ -7,15 +7,27 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## Modern Some Web Clicker [0.6.0 - 0.12.0]
 ### 0.14.0 [10/31/2018]
 #### Additions
+- New Click Portal upgrade.
 - New Click Case.
+- Added more upgrades for existing upgrades.
 
 #### Fixes
-- Fixed text that is slightly off center.
-- Fixed highest clicks stat does not updating unless the user clicks it.
+- Fixed why the game didn't check for new cases unless the user clicks.
+
+#### Known Bugs
+- Changing the clicker button text breaks the ripple.
+- Having multiple cases (more than six) then opening a few may break the way the case cards look.
+- The button to close the case dialog is too far to the left. 
 
 ### 0.13.0 [10/30/2018]
 #### Additions
 - Added mobile sound option.
+
+#### Known Bugs
+- Changing the clicker button text breaks the ripple.
+- Having multiple cases (more than six) then opening a few may break the way the case cards look.
+- The button to close the case dialog is too far to the left. 
+- The game doesn't check for new cases unless the user clicks.
 
 ### 0.12.0 [10/29/2018]
 #### Additions
@@ -35,6 +47,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Changing the clicker button text breaks the ripple.
 - Having multiple cases (more than six) then opening a few may break the way the case cards look.
 - The button to close the case dialog is too far to the left. 
+- The game doesn't check for new cases unless the user clicks.
 
 ### 0.11.0 [10/28/2018]
 #### Additions

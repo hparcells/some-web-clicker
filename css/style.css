@@ -21,6 +21,7 @@
     line-height: 0px;
 }
 
+/* Upgrades */
 #perClickCardImage {
     background: url("../images/shop/per-click.png") center / cover; 
 }
@@ -41,6 +42,11 @@
     background: url("../images/shop/auto-clicker.png") center / cover; 
 }
 
+#clickPortalCardImage {
+    background: url("../images/shop/click-portal.jpg") center / cover; 
+}
+
+/* Cases */
 #soundCaseCardImage {
     background: url("../images/cases/sound-case.png") center / cover; 
 }

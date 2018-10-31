@@ -13,7 +13,12 @@ var autoClickerLevelData = [
     {level: 3, price: 4500, perSecond: 4},
     {level: 4, price: 5500, perSecond: 5},
     {level: 5, price: 6500, perSecond: 6},
-    {level: 6, price: 7500, perSecond: 7}
+    {level: 6, price: 7500, perSecond: 7},
+    {level: 7, price: 8500, perSecond: 8},
+    {level: 8, price: 10000, perSecond: 9},
+    {level: 9, price: 12000, perSecond: 10},
+    {level: 10, price: 14000, perSecond: 12},
+    {level: 11, price: 16000, perSecond: 14},
 ];
 
 function buyAutoClicker() {
@@ -30,6 +35,7 @@ function buyAutoClicker() {
 
             checkCases();
             checkStats();
+            checkCases();   
         }, 100);
 
         autoClickerLevel++;
