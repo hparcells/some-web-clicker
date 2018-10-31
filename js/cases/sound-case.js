@@ -1,6 +1,6 @@
 var soundCaseTimeout;
 
-var contents = [
+var soundCaseContents = [
     "bombClickSound",
     "airhornClickSound",
     "rainbowClickSound",
@@ -8,7 +8,7 @@ var contents = [
 ];
 
 function getSoundCaseResult() {
-    return contents[Math.floor(Math.random() * contents.length)];
+    return soundCaseContents[Math.floor(Math.random() * soundCaseContents.length)];
 }
 
 async function openSoundCase() {
@@ -29,7 +29,9 @@ async function openSoundCase() {
     for(var i = 100; i <= 500; i += 10) {
         await delay(i);
         
-        var item = theItem.innerHTML = soundUnIdify(getSoundCaseResult());
+        var item = soundUnIdify(getSoundCaseResult());
+        theItem.innerHTML = item;
+        
         if(i !== 500) {
             playSound("defaultClickSound");
         }else {

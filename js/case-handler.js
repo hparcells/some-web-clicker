@@ -5,8 +5,12 @@ var caseOkay = document.getElementById("caseOkay");
 var caseList = document.getElementById("caseList");
 var noCases = document.getElementById("noCases");
 
+var soundCaseCardDescription = "Gives a random sound that can be used for clicking.";
+var clickCaseCardDescription = "Gives you clicks.";
+
 var cases = [
-    "Sound Case"
+    "Sound Case",
+    "Click Case"
 ];
 
 var caseData = [
@@ -41,7 +45,7 @@ function checkCases() {
             };
             snackbar.MaterialSnackbar.showSnackbar(data);
             
-            showCase(caseGot, caseIdify(caseGot), "Gives a random sound that can be used for clicking.");
+            showCase(caseGot, caseIdify(caseGot));
             caseUpdate();
 
             return;
@@ -53,6 +57,9 @@ function caseIdify(theCase) {
     switch(theCase) {
         case("Sound Case"): {
             return "soundCase";
+        }
+        case("Click Case"): {
+            return "clickCase";
         }
         default: {
             var data = {
@@ -69,6 +76,9 @@ function caseUnIdify(theCase) {
         case("soundCase"): {
             return "Sound Case";
         }
+        case("clickCase"): {
+            return "Click Case";
+        }
         default: {
             var data = {
                 message: `Case "${theCase}" Not Found!`,
@@ -79,7 +89,7 @@ function caseUnIdify(theCase) {
     }
 }
 
-function showCase(caseName, caseID, caseCardDescription) {
+function showCase(caseName, caseID) {
     var caseDiv = document.createElement("div");
     var imageDiv = document.createElement("div");
     var supportingTextDiv = document.createElement("div");
@@ -98,7 +108,23 @@ function showCase(caseName, caseID, caseCardDescription) {
 
     caseTitle.innerText = caseName;
 
-    caseDescription.innerText = caseCardDescription;
+    switch(caseID) {
+        case("soundCase"): {
+            caseDescription.innerText = soundCaseCardDescription;
+        }
+        break;
+        case("clickCase"): {
+            caseDescription.innerText = clickCaseCardDescription;
+        }
+        break;
+        default: {
+            var data = {
+                message: `Case "${theCase}" Not Found!`,
+                timeout: 2000
+            };
+            snackbar.MaterialSnackbar.showSnackbar(data);
+        }
+    }
 
     caseOptionsDiv.classList.add("mdl-card__actions", "mdl-card--border");
 
@@ -108,6 +134,10 @@ function showCase(caseName, caseID, caseCardDescription) {
         switch(caseID) {
             case("soundCase"): {
                 openSoundCase();
+            }
+            break;
+            case("clickCase"): {
+                openClickCase();
             }
             break;
             default: {
@@ -138,7 +168,11 @@ function loadCases() {
     for(x in casesInventory) {
         switch(caseIdify(casesInventory[x])) {
             case("soundCase"): {
-                showCase("Sound Case", "soundCase", "Gives a random sound that can be used for clicking.");
+                showCase("Sound Case", "soundCase", soundCaseCardDescription);
+            }
+            break;
+            case("clickCase"): {
+                showCase("Click Case", "clickCase", clickCaseCardDescription);
             }
             break;
             default: {

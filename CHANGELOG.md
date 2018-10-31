@@ -5,6 +5,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## Modern Some Web Clicker [0.6.0 - 0.12.0]
+### 0.14.0 [10/31/2018]
+#### Additions
+- New Click Case.
+
+#### Fixes
+- Fixed text that is slightly off center.
+- Fixed highest clicks stat does not updating unless the user clicks it.
+
 ### 0.13.0 [10/30/2018]
 #### Additions
 - Added mobile sound option.

@@ -38,9 +38,13 @@
 }
 
 #autoClickerCardImage {
-    background: url("../images/shop/coming-soon.png") center / cover; 
+    background: url("../images/shop/auto-clicker.png") center / cover; 
 }
 
 #soundCaseCardImage {
     background: url("../images/cases/sound-case.png") center / cover; 
+}
+
+#clickCaseCardImage {
+    background: url("../images/cases/click-case.png") center / cover; 
 }
