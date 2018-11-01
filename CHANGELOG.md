@@ -4,7 +4,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## Modern Some Web Clicker [0.6.0 - 0.12.0]
+## Modern Some Web Clicker [0.6.0 - 1.0.0]
+### 1.0.0 [11/01/2018]
+#### Additions
+- 1.0.0 release.
+
 ### 0.14.0 [10/31/2018]
 #### Additions
 - New Click Portal upgrade.

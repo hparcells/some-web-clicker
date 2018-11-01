@@ -1,5 +1,5 @@
 # SomeWebClicker
-![status](https://img.shields.io/badge/status-active-brightgreen.svg)
+![status](https://img.shields.io/badge/status-complete-brightgreen.svg)
 ![maintained](https://img.shields.io/badge/maintained-yes-brightgreen.svg)
 
 [![GitHub issues](https://img.shields.io/github/issues/hparcells/SomeWebClicker.svg)](https://github.com/hparcells/SomeWebClicker)
@@ -14,3 +14,6 @@ A lot of the code is badly designed, and probably will be all revised in the nea
 
 ## Play
 You can play Some Web Clicker now at [https://hparcells.me/games/some-web-clicker/](https://hparcells.me/games/some-web-clicker/).
+
+## Completed Project
+The completed status of this project means I will not be actively developing this, other than small bug fixes, and responding to pull requests and issues represented by the maintained badge. You can feel free to open a pull request with new features if you choose to do so.
