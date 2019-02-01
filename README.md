@@ -1,6 +1,6 @@
 # SomeWebClicker
 ![status](https://img.shields.io/badge/status-complete-brightgreen.svg)
-![maintained](https://img.shields.io/badge/maintained-yes-brightgreen.svg)
+![maintained](https://img.shields.io/badge/maintained-no%20(as%20of%202018)-red.svg)
 
 [![GitHub issues](https://img.shields.io/github/issues/hparcells/SomeWebClicker.svg)](https://github.com/hparcells/SomeWebClicker)
 [![GitHub pull requests](https://img.shields.io/github/issues-pr/hparcells/SomeWebClicker.svg)](https://github.com/hparcells/SomeWebClicker)
